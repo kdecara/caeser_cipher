@@ -41,9 +41,9 @@ void encrypt(FILE *in, FILE *out, int cipher)
     printf("encrypting file...\n");
     while(c != EOF)
     {
-	c = MOD(c + cipher, RING_SIZE);
-	fputc(c, out);
-	c = fgetc(in);
+	    c = MOD(c + cipher, RING_SIZE);
+    	fputc(c, out);
+	    c = fgetc(in);
     }
     printf("file encrypted...\n");
 }
@@ -55,9 +55,9 @@ void decrypt(FILE *in, FILE *out, int cipher)
     printf("decrypting file...\n");
     while(c != EOF)
     {
-	c = MOD(c - cipher, RING_SIZE);
-	fputc(c, out);
-	c = fgetc(in);
+	    c = MOD(c - cipher, RING_SIZE);
+	    fputc(c, out);
+	    c = fgetc(in);
     }
     printf("file decrypted...\n");
 }

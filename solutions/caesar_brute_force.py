@@ -90,6 +90,7 @@ def decrypt(cipher_text, key):
         plain_text += char
     return plain_text 
 
+
 file_name = sys.argv[1]
 buffer = load_buffer(file_name)
 #allow the user to chose from either the brute force or 
